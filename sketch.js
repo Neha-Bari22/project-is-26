@@ -9,7 +9,7 @@ var palyer, playerBase;
 var computer, computerBase;
 
 //Declare an array for arrows playerArrows = [ ]
-var playerArrows = [];
+var playerArrows = []
 
 var arrow;
 
@@ -75,9 +75,10 @@ function draw() {
   playerArcher.display();
   computerArcher.display()
 
- // Use for loop to display arrow using showArrow() function
- for (var i = 0; i < playerArrows.length; i++) {
-  showArrows(i, playerArrows);
+ // Use for lo}op to display arrow using showArrow() function
+ for(var i = 0; i< playerArrows.length; i ++){
+  showArrows (i, playerArrows)
+  
 }
 
 }
@@ -92,10 +93,9 @@ function keyPressed() {
 
     var arrow = new PlayerArrow(posX, posY, 100, 10);
 
-    arrow.trajectory = [];
-    Matter.Body.setAngle(arrow.body, angle);
-    playerArrows.push(arrow);
-
+  arrow.trajectory = [];
+  Matter.Body.setAngle(arrow.body, angle);
+  playerArrows.push(arrow);
   }
 }
 
@@ -109,13 +109,9 @@ function keyReleased () {
     }
   }
 
+
 }
 //Display arrow and Tranjectory
-function showArrows(index, arrows) {
-  arrows[index].display();
-  
-    
-  
- 
-
+function showArrows(index,arrows) {
+  arrows[index].display()
 }
